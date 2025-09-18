@@ -34,16 +34,13 @@ const TaskList = () => {
     );
   };
 
-
-
-  
   if (isLoading) {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
-      <p>Loading...</p>
-    </div>
-  );
-}
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   if (isError) return <p>Error: {error.message}</p>;
 
@@ -94,7 +91,10 @@ const TaskList = () => {
             <div className="flex justify-center items-center space-x-4 mt-8">
               <button
                 onClick={() => setPage((p) => Math.max(p - 1, 1))}
-                className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors shadow-sm"
+                className="flex cursor-pointer items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white 
+               border border-gray-300 rounded-lg 
+               hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed 
+               transition-colors shadow-sm"
                 disabled={page === 1}
               >
                 ← Previous
@@ -106,7 +106,9 @@ const TaskList = () => {
 
               <button
                 onClick={() => setPage((p) => p + 1)}
-                className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors shadow-sm"
+                className="flex cursor-pointer items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white 
+               border border-gray-300 rounded-lg 
+               hover:bg-gray-200 transition-colors shadow-sm"
               >
                 Next →
               </button>
