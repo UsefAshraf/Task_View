@@ -4,7 +4,6 @@ import { useTasks, useTaskByCategory, useUpdateTask } from "../hooks/useTasks";
 import { useCategories } from "../hooks/useCategories";
 import Navbar from "./Navbar";
 import TaskCard from "./TaskCard";
-import { Spinner } from "@heroui/react";
 
 const TaskList = () => {
   const [categoryId, setCategoryId] = useState(null);
@@ -53,7 +52,6 @@ const TaskList = () => {
       <Navbar taskCount={tasks?.length} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
-        {/* Filter Section */}
         <div className="bg-white rounded-xl shadow-sm border p-6 mb-8">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold text-gray-900">
@@ -79,7 +77,6 @@ const TaskList = () => {
           </div>
         </div>
 
-        {/* Task Grid */}
         {tasks?.length ? (
           <>
             <div className="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
@@ -94,7 +91,6 @@ const TaskList = () => {
               ))}
             </div>
 
-            {/* Pagination */}
             <div className="flex justify-center items-center space-x-4 mt-8">
               <button
                 onClick={() => setPage((p) => Math.max(p - 1, 1))}

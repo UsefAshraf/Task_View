@@ -7,7 +7,6 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<TaskList />} />
-          {/* You can add more routes later like CreateTaskPage, ApiTest etc. */}
         </Routes>
       </Router>
   );

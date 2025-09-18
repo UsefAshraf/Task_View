@@ -1,4 +1,3 @@
-// src/components/TaskCard.jsx
 import { CheckCircle2, Circle, Tag } from "lucide-react";
 
 const TaskCard = ({ task, category, updatingId, handleToggle }) => {

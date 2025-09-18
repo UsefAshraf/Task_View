@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import { CheckCircle2 } from "lucide-react";
 
 const Navbar = ({ taskCount }) => {
